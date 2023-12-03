@@ -16,7 +16,6 @@ public class ONFailure implements ITestListener{
 		
 		String testcasename=Result.getTestName().toString();
 		
-		Date a=new DateTime();
 		
 		
 		

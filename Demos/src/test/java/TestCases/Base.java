@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class Base {
 
-	WebDriver driver;
+	static WebDriver driver;
 
 	String browser = "Chrome";
 
@@ -21,8 +21,9 @@ public class Base {
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver", "C:\\chrome\\chromedriver-win64\\chromedriver.exe");
-			WebDriver driver = new ChromeDriver();
+			driver = new ChromeDriver();
 			driver.manage().window().maximize();
+			driver.get("http://www.automationpractice.pl/index.php?id_category=4&controller=category");
 
 		}
 
